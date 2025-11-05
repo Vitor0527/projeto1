@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma do Estudante — Processos</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    
+    <!-- Menu Toggle Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
+    
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav" aria-label="Navegação principal">
+        <ul class="menu-list">
+          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li>
+            <details class="menu-details" open>
+              <summary class="menu-item">Geral <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="processos.html" class="submenu-item">Processos</a></li>
+                <li><a href="#" class="submenu-item">Dados Pessoais</a></li>
+                <li><a href="#" class="submenu-item">Privacidade</a></li>
+                <li><a href="#" class="submenu-item">Ajuda</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Concursos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Creditações <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Documentos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Aula <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Disciplina <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Curso <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Instituição <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li><a href="#" class="menu-item">Eleições</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile (clickable to close) -->
+    <label for="menu-toggle" class="sidebar-overlay" aria-label="Fechar menu"></label>
+
+    <header class="topbar" role="banner">
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+      <div class="topbar__brand">
+        <img src="assets/logo.png" alt="UMA" width="120" height="40" />
+        <span class="title">Plataforma</span>
+      </div>
+      <div class="topbar__user">
+        <details class="user-menu">
+          <summary class="user-trigger" aria-label="Abrir menu do utilizador">
+            <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de perfil" width="32" height="32" />
+          </summary>
+          <div class="menu" role="menu" aria-label="Menu do utilizador">
+            <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
+            <a class="menu-item" role="menuitem" href="login.html">Sair</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <div class="page-header">
+        <h1 class="page-title">Lista de Processos do Aluno - Unidade de Assuntos Académicos</h1>
+        <button class="btn-add" type="button" aria-label="Adicionar novo processo">
+          <span aria-hidden="true">+</span>
+        </button>
+      </div>
+
+      <section class="content-section">
+        <div class="table-wrapper">
+          <table class="table table-processos" role="table" aria-label="Lista de processos do aluno">
+            <thead>
+              <tr>
+                <th scope="col">Nº Requer.</th>
+                <th scope="col">Processo</th>
+                <th scope="col">Assunto</th>
+                <th scope="col">Data Entrada</th>
+                <th scope="col">Despacho</th>
+                <th scope="col">Data Saída</th>
+                <th scope="col">Observações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5572/25</td>
+                <td>Reclamação</td>
+                <td>Foi chamado para ocupar uma vaga e foi aplicado uma coima.</td>
+                <td>2025-09-29</td>
+                <td>Em Análise</td>
+                <td>2025-10-02</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>© Universidade da Madeira — Projeto académico </p>
+    </footer>
+  </body>
+</html>
+

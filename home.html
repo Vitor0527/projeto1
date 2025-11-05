@@ -8,17 +8,91 @@
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    
+    <!-- Menu Toggle Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
+    
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav" aria-label="Navegação principal">
+        <ul class="menu-list">
+          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Geral <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="processos.html" class="submenu-item">Processos</a></li>
+                <li><a href="#" class="submenu-item">Dados Pessoais</a></li>
+                <li><a href="#" class="submenu-item">Privacidade</a></li>
+                <li><a href="#" class="submenu-item">Ajuda</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Concursos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Creditações <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Documentos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Aula <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Disciplina <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Curso <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Instituição <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li><a href="#" class="menu-item">Eleições</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile (clickable to close) -->
+    <label for="menu-toggle" class="sidebar-overlay" aria-label="Fechar menu"></label>
+
     <header class="topbar" role="banner">
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
       <div class="topbar__brand">
         <img src="assets/logo.png" alt="UMA" width="120" height="40" />
         <span class="title">Plataforma</span>
       </div>
-      <nav class="topbar__nav" aria-label="Principal">
-        <a href="#" class="nav-link is-active">Início</a>
-        <a href="#" class="nav-link">Serviços</a>
-        <a href="#" class="nav-link">Avaliação</a>
-        <a href="#" class="nav-link">Curso</a>
-      </nav>
       <div class="topbar__user">
         <details class="user-menu">
           <summary class="user-trigger" aria-label="Abrir menu do utilizador">

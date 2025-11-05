@@ -3,7 +3,7 @@
 	--bg: light-dark(#f2f5f8, #0f1114);
 	--surface: light-dark(#ffffff, #171a1f);
 	--text: light-dark(#111827, #e5e7eb);
-	--muted: light-dark(#6b7280, #9ca3af);
+	--muted: light-dark(#4b5563, #d1d5db);
 	--primary: light-dark(#5b7cfa, #7aa2ff);
 	--primary-contrast: #ffffff;
 	--focus: #22c55e;
@@ -40,8 +40,18 @@ body {
 	box-shadow: var(--shadow);
 }
 
-.brand { text-align: center; display: grid; gap: .5rem; }
-.brand-logo { display: block; margin: 0 auto .25rem; height: auto; }
+.brand { text-align: center; display: grid; gap: .5rem; position: relative; }
+.brand-logo { display: block; margin: 0 auto .25rem; height: auto; grid-column: 1; grid-row: 1; }
+
+/* Logo theme switching - logos sobrepostos no mesmo espaço */
+
+.logo-light { display: block; }
+.logo-dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+	.logo-light { display: none; }
+	.logo-dark { display: block; }
+}
 .subtitle { margin: 0; color: var(--muted); font-size: .95rem; }
 
 .form { display: grid; gap: 1rem; }
