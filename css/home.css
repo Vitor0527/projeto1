@@ -21,16 +21,199 @@
 
 .topbar {
 	position: sticky; top: 0; z-index: 10;
-	display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+	display: grid; grid-template-columns: auto 1fr auto; align-items: center;
 	gap: 1rem; padding: .75rem 1rem;
 	background: color-mix(in oklab, var(--surface), black 2%);
 	border-bottom: 1px solid var(--border);
 }
 .topbar__brand { display: flex; align-items: center; gap: .5rem; font-weight: 800; }
-.topbar__nav { display: flex; gap: .75rem; justify-content: center; }
-.nav-link { padding: .5rem .75rem; border-radius: 999px; color: var(--text); text-decoration: none; }
-.nav-link:is(:hover, :focus-visible) { background: color-mix(in oklab, var(--primary), transparent 85%); }
-.nav-link.is-active { background: color-mix(in oklab, var(--primary), transparent 80%); color: var(--text); }
+
+/* Menu Toggle Button */
+.menu-toggle-checkbox { display: none; }
+.menu-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	margin-right: .5rem;
+}
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 24px;
+}
+.hamburger span {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: var(--text);
+	border-radius: 2px;
+	transition: transform .3s ease, opacity .3s ease;
+}
+.menu-toggle-checkbox:checked ~ .sidebar-overlay ~ .topbar .menu-toggle .hamburger span:nth-child(1) {
+	transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle-checkbox:checked ~ .sidebar-overlay ~ .topbar .menu-toggle .hamburger span:nth-child(2) {
+	opacity: 0;
+}
+.menu-toggle-checkbox:checked ~ .sidebar-overlay ~ .topbar .menu-toggle .hamburger span:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Sidebar */
+.sidebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 280px;
+	background: var(--surface);
+	border-right: 1px solid var(--border);
+	box-shadow: var(--elev);
+	transform: translateX(-100%);
+	transition: transform .3s ease;
+	z-index: 100;
+	overflow-y: auto;
+}
+.menu-toggle-checkbox:checked ~ .sidebar {
+	transform: translateX(0);
+}
+
+.sidebar-overlay {
+	position: fixed;
+	inset: 0;
+	background: color-mix(in oklab, #000, transparent 60%);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s ease;
+	z-index: 99;
+}
+.menu-toggle-checkbox:checked ~ .sidebar-overlay {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.sidebar-nav {
+	padding: 1rem 0;
+}
+
+.menu-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-list li {
+	border-bottom: 1px solid var(--border);
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .875rem 1.25rem;
+	color: var(--text);
+	text-decoration: none;
+	transition: background .15s ease;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.menu-item:is(:hover, :focus-visible) {
+	background: color-mix(in oklab, var(--primary), transparent 85%);
+}
+
+.menu-item[href="home.html"] {
+	background: color-mix(in oklab, var(--primary), transparent 80%);
+	font-weight: 600;
+}
+
+.menu-item .arrow {
+	font-size: 1.2rem;
+	color: var(--muted);
+	margin-left: auto;
+	transition: transform .2s ease;
+	display: inline-block;
+}
+
+.menu-details {
+	width: 100%;
+	position: relative;
+}
+
+.menu-details summary {
+	list-style: none;
+	cursor: pointer;
+}
+
+.menu-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.menu-details[open] > .menu-item {
+	background: light-dark(#4a90e2, #1a1d23); /* Light blue in light mode, dark background in dark mode */
+	color: light-dark(#ffffff, #ff6b35); /* White text in light mode, orange in dark mode */
+	position: relative;
+}
+
+.menu-details[open] > .menu-item::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: #ff6b35; /* Orange accent bar */
+}
+
+.menu-details[open] > .menu-item .arrow {
+	color: light-dark(#ffffff, #ff6b35); /* White arrow in light mode, orange in dark mode */
+	transform: rotate(90deg);
+}
+
+/* Submenu styling - inline expansion */
+.submenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	display: none;
+}
+
+.menu-details[open] .submenu {
+	display: block;
+}
+
+.submenu-item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0.75rem 1.25rem 0.75rem 2rem; /* Indented to the right */
+	color: var(--text);
+	text-decoration: none;
+	transition: background .15s ease;
+	width: 100%;
+	box-sizing: border-box;
+	background: var(--surface);
+}
+
+.submenu-item:is(:hover, :focus-visible) {
+	background: color-mix(in oklab, var(--primary), transparent 85%);
+}
+
+.submenu li {
+	border-bottom: 1px solid var(--border);
+}
+
+.submenu li:last-child {
+	border-bottom: none;
+}
 
 .topbar__user { justify-self: end; position: relative; }
 .btn.ghost { background: transparent; border: 1px solid var(--border); padding: .35rem .5rem; border-radius: 999px; cursor: pointer; }
@@ -103,4 +286,86 @@
 .scroll-y::-webkit-scrollbar-thumb { background: color-mix(in oklab, var(--primary), black 25%); border-radius: 8px; }
 .scroll-y::-webkit-scrollbar-thumb:hover { background: color-mix(in oklab, var(--primary), black 35%); }
 
+/* Page Header */
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	gap: 1rem;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.btn-add {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform .15s ease, filter .15s ease;
+	flex-shrink: 0;
+}
+
+.btn-add:is(:hover, :focus-visible) {
+	filter: brightness(1.1);
+	transform: scale(1.05);
+}
+
+.btn-add:active {
+	transform: scale(0.95);
+}
+
+/* Content Section */
+.content-section {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1rem;
+	box-shadow: var(--elev);
+}
+
+.table-wrapper {
+	overflow-x: auto;
+}
+
+.table-processos {
+	width: 100%;
+	font-size: .95rem;
+}
+
+.table-processos th {
+	background: color-mix(in oklab, var(--surface), black 5%);
+	font-weight: 600;
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 2px solid var(--border);
+	white-space: nowrap;
+}
+
+.table-processos td {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.table-processos tbody tr:is(:hover, :focus-within) {
+	background: color-mix(in oklab, var(--primary), transparent 90%);
+}
+
+/* Active submenu item */
+.submenu-item[href="processos.html"] {
+	background: color-mix(in oklab, var(--primary), transparent 80%);
+	font-weight: 600;
+}
 
