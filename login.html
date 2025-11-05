@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma do Estudante — Login</title>
+    <link rel="preload" as="image" href="assets/logo.png" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-card" aria-labelledby="titulo-login">
+        <header class="brand">
+          <img class="brand-logo" src="assets/logo.png" alt="Universidade da Madeira" width="160" height="48" />
+          <h1 id="titulo-login">Plataforma do Estudante</h1>
+          <p class="subtitle">Inicie sessão para continuar</p>
+        </header>
+
+        <form class="form" action="home.html" method="get">
+          <div class="field">
+            <label for="student">Nº de Aluno</label>
+            <input
+              id="student"
+              name="student"
+              placeholder="Nº de aluno"
+              inputmode="numeric"
+              pattern="[0-9]{4,10}"
+              required
+              autocomplete="username"
+              aria-describedby="student-hint"
+            />
+            <p class="hint" id="student-hint">Entre 4 e 10 dígitos numéricos.</p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Password"
+              minlength="6"
+              required
+              autocomplete="current-password"
+              aria-describedby="password-hint"
+            />
+            <p class="hint" id="password-hint">Mínimo 6 caracteres.</p>
+          </div>
+
+          <button class="submit" type="submit">Entrar</button>
+        </form>
+
+        <footer class="links">
+          <a class="recover" href="#">Recuperar password</a>
+        </footer>
+      </section>
+    </main>
+  </body>
+  </html>
+
+
