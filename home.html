@@ -16,13 +16,13 @@
     <aside class="sidebar" id="sidebar">
       <nav class="sidebar-nav" aria-label="Navegação principal">
         <ul class="menu-list">
-          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li><a href="home.html" class="menu-item active" aria-current="page">Início</a></li>
           <li>
             <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
-                <li><a href="#" class="submenu-item">Dados Pessoais</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="#" class="submenu-item">Privacidade</a></li>
                 <li><a href="#" class="submenu-item">Ajuda</a></li>
               </ul>
@@ -90,7 +90,10 @@
         </span>
       </label>
       <div class="topbar__brand">
-        <img src="assets/logo.png" alt="UMA" width="120" height="40" />
+        <div class="logo-container">
+          <img class="logo-light" src="assets/logo1.png" alt="UMA" width="120" height="40" />
+          <img class="logo-dark" src="assets/logo.png" alt="UMA" width="120" height="40" />
+        </div>
         <span class="title">Plataforma</span>
       </div>
       <div class="topbar__user">
@@ -99,6 +102,10 @@
             <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de perfil" width="32" height="32" />
           </summary>
           <div class="menu" role="menu" aria-label="Menu do utilizador">
+            <div class="user-info">
+              <div class="user-name">Anónimo</div>
+              <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
+            </div>
             <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
             <a class="menu-item" role="menuitem" href="login.html">Sair</a>
           </div>
@@ -112,7 +119,7 @@
         <!-- Últimas Pautas -->
         <article class="card fade-in" aria-labelledby="pautas-title">
           <h2 id="pautas-title" class="card-title">Últimas Pautas</h2>
-          <div class="card-body">
+          <div class="card-body scroll-y">
             <table class="table table-compact" role="table" aria-describedby="pautas-desc">
               <caption id="pautas-desc" class="visually-hidden">Lista das últimas pautas com avaliação e classificação</caption>
               <thead>
@@ -188,13 +195,15 @@
         <article class="card fade-in" aria-labelledby="proc-title">
           <h2 id="proc-title" class="card-title">Lista de Processos do Aluno - Unidade de Assuntos Académicos</h2>
           <div class="card-body">
-            <table class="table table-compact">
+            <div class="table-wrapper">
+              <table class="table table-compact">
               <thead>
                 <tr>
                   <th scope="col">Entrada</th>
                   <th scope="col">Processo</th>
                   <th scope="col">Saída</th>
                   <th scope="col">Despacho</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -203,9 +212,11 @@
                   <td>Reclamação</td>
                   <td>2025-10-02</td>
                   <td>Em Análise</td>
+                  <td><a href="processos.html" class="info-link">[+info]</a></td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>
         </article>
 

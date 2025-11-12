@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma do Estudante — Dados Pessoais</title>
+    <link rel="stylesheet" href="css/dados-pessoais.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    
+    <!-- Menu Toggle Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
+    
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav" aria-label="Navegação principal">
+        <ul class="menu-list">
+          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li>
+            <details class="menu-details" open>
+              <summary class="menu-item">Geral <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="processos.html" class="submenu-item">Processos</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item active" aria-current="page">Dados Pessoais</a></li>
+                <li><a href="#" class="submenu-item">Privacidade</a></li>
+                <li><a href="#" class="submenu-item">Ajuda</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Concursos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Creditações <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Documentos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Aula <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Disciplina <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Curso <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Instituição <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li><a href="#" class="menu-item">Eleições</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile (clickable to close) -->
+    <label for="menu-toggle" class="sidebar-overlay" aria-label="Fechar menu"></label>
+
+    <header class="topbar" role="banner">
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+      <div class="topbar__brand">
+        <div class="logo-container">
+          <img class="logo-light" src="assets/logo1.png" alt="UMA" width="120" height="40" />
+          <img class="logo-dark" src="assets/logo.png" alt="UMA" width="120" height="40" />
+        </div>
+        <span class="title">Plataforma</span>
+      </div>
+      <div class="topbar__user">
+        <details class="user-menu">
+          <summary class="user-trigger" aria-label="Abrir menu do utilizador">
+            <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de perfil" width="32" height="32" />
+          </summary>
+          <div class="menu" role="menu" aria-label="Menu do utilizador">
+            <div class="user-info">
+              <div class="user-name">Anónimo</div>
+              <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
+            </div>
+            <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
+            <a class="menu-item" role="menuitem" href="login.html">Sair</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <div class="page-header">
+        <h1 class="page-title">Dados Pessoais</h1>
+      </div>
+
+      <section class="dados-grid">
+        <!-- Nome e Informação Biográfica -->
+        <article class="card fade-in" aria-labelledby="nome-title">
+          <div class="card-header">
+            <h2 id="nome-title" class="card-title">Nome e Informação Biográfica</h2>
+            <button class="btn-edit" type="button" aria-label="Alterar dados">Alterar</button>
+          </div>
+          <div class="card-body">
+            <div class="profile-section">
+              <div class="profile-photo">
+                <img src="assets/avatar.jpg" alt="Foto de perfil" width="120" height="120" />
+              </div>
+              <div class="profile-info">
+                <dl class="info-list">
+                  <dt>Nome Completo:</dt>
+                  <dd>Ambatu Kham</dd>
+                  <dt>Nome Abreviado:</dt>
+                  <dd>Ambatu Kham</dd>
+                  <dt>Nomes Próprios:</dt>
+                  <dd>Ambatu Kham</dd>
+                  <dt>Apelidos:</dt>
+                  <dd>Pajeet Rasheen</dd>
+                  <dt>Data de Nascimento:</dt>
+                  <dd>2006-05-17</dd>
+                  <dt>Sexo:</dt>
+                  <dd>Masculino</dd>
+                  <dt>Estado Civil:</dt>
+                  <dd>Solteiro</dd>
+                  <dt>Naturalidade:</dt>
+                  <dd>Portugal (Região Autónoma da Madeira | Calheta | Arco da Calheta)</dd>
+                  <dt>Nacionalidade:</dt>
+                  <dd>Portugal</dd>
+                  <dt>Pai - Nome Completo:</dt>
+                  <dd>Sekou Toure</dd>
+                  <dt>Mãe - Nome Completo:</dt>
+                  <dd>Awa Diallo</dd>
+                  <dt>Aluno N°:</dt>
+                  <dd>213392406</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Documentos de Identificação -->
+        <article class="card fade-in" aria-labelledby="documentos-title">
+          <div class="card-header">
+            <h2 id="documentos-title" class="card-title">Documentos de Identificação</h2>
+          </div>
+          <div class="card-body">
+            <div class="documento-item">
+              <div class="documento-header">
+                <h3 class="documento-title">Número de Identificação Fiscal</h3>
+                <div class="documento-actions">
+                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
+                  <button class="btn-add-small" type="button" aria-label="Adicionar">Adicionar</button>
+                </div>
+              </div>
+              <dl class="info-list">
+                <dt>Número:</dt>
+                <dd>267296809</dd>
+                <dt>País de Emissão:</dt>
+                <dd>Portugal</dd>
+              </dl>
+            </div>
+
+            <div class="documento-item">
+              <div class="documento-header">
+                <h3 class="documento-title">Número de Identificação Civil</h3>
+                <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
+              </div>
+              <dl class="info-list">
+                <dt>Número:</dt>
+                <dd>30073438 1XW1</dd>
+                <dt>País de Emissão:</dt>
+                <dd>Portugal</dd>
+                <dt>Validade:</dt>
+                <dd>2026-09-08</dd>
+              </dl>
+            </div>
+
+            <div class="documento-item">
+              <div class="documento-header">
+                <h3 class="documento-title">Segurança Social (Caixa)</h3>
+                <div class="documento-actions">
+                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
+                  <button class="btn-delete" type="button" aria-label="Apagar">Apagar</button>
+                </div>
+              </div>
+              <dl class="info-list">
+                <dt>Número:</dt>
+                <dd>12022823234</dd>
+                <dt>País de Emissão:</dt>
+                <dd>Portugal</dd>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <!-- Contactos -->
+        <article class="card fade-in" aria-labelledby="contactos-title">
+          <div class="card-header">
+            <h2 id="contactos-title" class="card-title">Contactos</h2>
+            <button class="btn-edit" type="button" aria-label="Alterar contactos">Alterar</button>
+          </div>
+          <div class="card-body">
+            <dl class="info-list">
+              <dt>Número de telefone:</dt>
+              <dd>296 893 068</dd>
+              <dt>Número de telemóvel:</dt>
+              <dd>935 306 893</dd>
+              <dt>Email Pessoal:</dt>
+              <dd>batukham98@gmail.com</dd>
+              <dt>Email Institucional:</dt>
+              <dd>213392406@student.uma.pt</dd>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Morada -->
+        <article class="card fade-in" aria-labelledby="morada-title">
+          <div class="card-header">
+            <h2 id="morada-title" class="card-title">Morada</h2>
+            <button class="btn-edit" type="button" aria-label="Alterar morada">Alterar</button>
+          </div>
+          <div class="card-body">
+            <dl class="info-list">
+              <dt>Morada de Correspondência:</dt>
+              <dd>
+                Impasse Cova do Arco, Arco da Calheta N°68<br>
+                8937-030 Arco da Calheta<br>
+                Portugal
+              </dd>
+            </dl>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>© Universidade da Madeira — Projeto académico</p>
+    </footer>
+  </body>
+</html>
+
