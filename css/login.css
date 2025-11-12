@@ -41,16 +41,37 @@ body {
 }
 
 .brand { text-align: center; display: grid; gap: .5rem; position: relative; }
-.brand-logo { display: block; margin: 0 auto .25rem; height: auto; grid-column: 1; grid-row: 1; }
 
-/* Logo theme switching - logos sobrepostos no mesmo espaço */
+/* Logo container - logos sobrepostos no mesmo espaço */
+.brand-logo-container {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto .25rem;
+	grid-column: 1;
+	grid-row: 1;
+}
 
-.logo-light { display: block; }
-.logo-dark { display: none; }
+.brand-logo {
+	display: block;
+	margin: 0;
+	height: auto;
+}
+
+.brand-logo-container .logo-light {
+	display: block;
+}
+
+.brand-logo-container .logo-dark {
+	display: none;
+}
 
 @media (prefers-color-scheme: dark) {
-	.logo-light { display: none; }
-	.logo-dark { display: block; }
+	.brand-logo-container .logo-light {
+		display: none;
+	}
+	.brand-logo-container .logo-dark {
+		display: block;
+	}
 }
 .subtitle { margin: 0; color: var(--muted); font-size: .95rem; }
 

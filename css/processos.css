@@ -1,0 +1,81 @@
+/* Processos page specific styles */
+
+@import url("common.css");
+
+/* Page Header */
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	gap: 1rem;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.btn-add {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform .15s ease, filter .15s ease;
+	flex-shrink: 0;
+}
+
+.btn-add:is(:hover, :focus-visible) {
+	filter: brightness(1.1);
+	transform: scale(1.05);
+}
+
+.btn-add:active {
+	transform: scale(0.95);
+}
+
+/* Content Section */
+.content-section {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1rem;
+	box-shadow: var(--elev);
+}
+
+.table-wrapper {
+	overflow-x: auto;
+}
+
+.table-processos {
+	width: 100%;
+	font-size: .95rem;
+}
+
+.table-processos th {
+	background: color-mix(in oklab, var(--surface), black 5%);
+	font-weight: 600;
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 2px solid var(--border);
+	white-space: nowrap;
+}
+
+.table-processos td {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.table-processos tbody tr:is(:hover, :focus-within) {
+	background: color-mix(in oklab, var(--primary), transparent 90%);
+}
+

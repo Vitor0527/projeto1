@@ -1,0 +1,155 @@
+/* Dados Pessoais page specific styles */
+
+@import url("common.css");
+
+.dados-grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+	.dados-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.dados-grid > article:first-child {
+		grid-column: span 2;
+	}
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.btn-edit,
+.btn-add-small,
+.btn-delete {
+	padding: .5rem 1rem;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--surface);
+	color: var(--text);
+	font-size: .875rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background .15s ease, border-color .15s ease;
+}
+
+.btn-edit:hover,
+.btn-edit:focus-visible {
+	background: color-mix(in oklab, var(--primary), transparent 90%);
+	border-color: var(--primary);
+}
+
+.btn-add-small {
+	background: var(--primary);
+	color: var(--primary-contrast);
+	border-color: var(--primary);
+}
+
+.btn-add-small:hover,
+.btn-add-small:focus-visible {
+	background: color-mix(in oklab, var(--primary), black 10%);
+}
+
+.btn-delete {
+	background: var(--error);
+	color: var(--primary-contrast);
+	border-color: var(--error);
+}
+
+.btn-delete:hover,
+.btn-delete:focus-visible {
+	background: color-mix(in oklab, var(--error), black 10%);
+}
+
+.profile-section {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: auto 1fr;
+}
+
+.profile-photo img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--border);
+}
+
+.info-list {
+	display: grid;
+	gap: .75rem;
+	margin: 0;
+}
+
+.info-list dt {
+	font-weight: 600;
+	color: var(--muted);
+	font-size: .9rem;
+}
+
+.info-list dd {
+	margin: 0;
+	color: var(--text);
+	font-size: 1rem;
+	margin-bottom: .5rem;
+}
+
+.documento-item {
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid var(--border);
+	margin-bottom: 1.5rem;
+}
+
+.documento-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.documento-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.documento-title {
+	margin: 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.documento-actions {
+	display: flex;
+	gap: .5rem;
+}
+
+@media (max-width: 768px) {
+	.profile-section {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.card-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: .75rem;
+	}
+	.documento-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: .75rem;
+	}
+	.documento-actions {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
