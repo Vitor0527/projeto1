@@ -1,0 +1,151 @@
+/* Ajuda page specific styles */
+
+@import url("common.css");
+
+.page-header {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	margin-bottom: 1.5rem;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.page-subtitle {
+	margin: 0;
+	color: var(--muted);
+	max-width: 60rem;
+	font-size: .95rem;
+}
+
+.ajuda-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+	gap: 1.5rem;
+	align-items: flex-start;
+}
+
+.ajuda-card {
+	padding: 1.25rem 1.5rem;
+}
+
+.ajuda-contactos {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.contacto-bloco {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.contacto-bloco:last-of-type {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.contacto-titulo {
+	margin: 0 0 .35rem;
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+.contacto-texto {
+	margin: 0 0 .4rem;
+	font-size: .95rem;
+	line-height: 1.5;
+}
+
+.contacto-texto a {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+.contacto-texto a:is(:hover, :focus-visible) {
+	text-decoration: underline;
+}
+
+.form-intro {
+	margin: 0 0 1rem;
+	color: var(--muted);
+	font-size: .9rem;
+}
+
+.ajuda-form {
+	display: grid;
+	gap: .9rem;
+}
+
+.ajuda-form .field {
+	display: grid;
+	gap: .35rem;
+}
+
+.ajuda-form label {
+	font-weight: 600;
+	font-size: .9rem;
+}
+
+.ajuda-form input,
+.ajuda-form select,
+.ajuda-form textarea {
+	width: 100%;
+	padding: .65rem .8rem;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background: light-dark(#f9fafb, #0f1114);
+	color: var(--text);
+	font: inherit;
+	outline: none;
+	resize: vertical;
+	min-height: 0;
+}
+
+.ajuda-form textarea {
+	min-height: 140px;
+}
+
+.ajuda-form input:focus-visible,
+.ajuda-form select:focus-visible,
+.ajuda-form textarea:focus-visible {
+	border-color: var(--focus);
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--focus), transparent 75%);
+}
+
+.btn-submit {
+	margin-top: .5rem;
+	align-self: flex-start;
+	padding: .7rem 1.4rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: .95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform .05s ease, filter .15s ease;
+}
+
+.btn-submit:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+}
+
+.btn-submit:active {
+	transform: translateY(1px);
+}
+
+@media (max-width: 900px) {
+	.ajuda-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.ajuda-card {
+		padding: 1rem 1.1rem;
+	}
+}
+
+
