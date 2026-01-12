@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataforma do Estudante — Dados Pessoais</title>
-    <link rel="stylesheet" href="css/dados-pessoais.css" />
+    <title>Plataforma do Estudante — Submeter Novo Requerimento</title>
+    <link rel="stylesheet" href="css/requerimentos.css" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
@@ -18,18 +18,18 @@
         <ul class="menu-list">
           <li><a href="home.html" class="menu-item">Início</a></li>
           <li>
-            <details class="menu-details" open>
+            <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
-                <li><a href="dados-pessoais.html" class="submenu-item active" aria-current="page">Dados Pessoais</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
                 <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
               </ul>
             </details>
           </li>
           <li>
-            <details class="menu-details">
+            <details class="menu-details" open>
               <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="pagamentos.html" class="submenu-item">Pagamentos</a></li>
@@ -121,7 +121,7 @@
           </summary>
           <div class="menu" role="menu" aria-label="Menu do utilizador">
             <div class="user-info">
-              <div class="user-name">Vítor Hugo Pereira Nunes</div>
+              <div class="user-name">Anónimo</div>
               <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
             </div>
             <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
@@ -132,143 +132,127 @@
     </header>
 
     <main id="conteudo" class="container">
-      <div class="page-header">
-        <h1 class="page-title">Dados Pessoais</h1>
+      <div class="tabs">
+        <a href="requerimentos.html" class="tab">Lista de Requerimentos</a>
+        <a href="requerimentos-novo.html" class="tab active">Submeter Novo/Detalhe</a>
       </div>
 
-      <section class="dados-grid">
-        <!-- Nome e Informação Biográfica -->
-        <article class="card fade-in" aria-labelledby="nome-title">
-          <div class="card-header">
-            <h2 id="nome-title" class="card-title">Nome e Informação Biográfica</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar dados">Alterar</button>
-          </div>
-          <div class="card-body">
-            <div class="profile-section">
-              <div class="profile-photo">
-                <img src="assets/avatar.jpg" alt="Foto de perfil" width="120" height="120" />
-              </div>
-              <div class="profile-info">
-                <dl class="info-list">
-                  <dt>Nome Completo:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nome Abreviado:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nomes Próprios:</dt>
-                  <dd>Vítor Hugo</dd>
-                  <dt>Apelidos:</dt>
-                  <dd>Pereira Nunes</dd>
-                  <dt>Data de Nascimento:</dt>
-                  <dd>2006-05-17</dd>
-                  <dt>Sexo:</dt>
-                  <dd>Masculino</dd>
-                  <dt>Estado Civil:</dt>
-                  <dd>Solteiro</dd>
-                  <dt>Naturalidade:</dt>
-                  <dd>Portugal (Região Autónoma da Madeira | Calheta | Arco da Calheta)</dd>
-                  <dt>Nacionalidade:</dt>
-                  <dd>Portugal</dd>
-                  <dt>Aluno N°:</dt>
-                  <dd>2133924</dd>
-                </dl>
-              </div>
+      <form class="requerimento-form" action="#" method="post">
+        <!-- Despacho Section -->
+        <section class="form-section card fade-in" aria-labelledby="despacho-title">
+          <h2 id="despacho-title" class="section-title">Despacho</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="data-despacho">Data do Despacho:</label>
+              <input type="date" id="data-despacho" name="data-despacho" />
+            </div>
+            <div class="form-group">
+              <label for="despacho-text">Despacho:</label>
+              <input type="text" id="despacho-text" name="despacho-text" />
+            </div>
+            <div class="form-group">
+              <label for="justificacao">Justificação:</label>
+              <input type="text" id="justificacao" name="justificacao" />
+            </div>
+            <div class="form-group">
+              <label for="cod-entrada">Cod. Entrada</label>
+              <input type="text" id="cod-entrada" name="cod-entrada" />
+            </div>
+            <div class="form-group">
+              <label for="data-entrada">Data Entrada:</label>
+              <input type="date" id="data-entrada" name="data-entrada" />
+            </div>
+            <div class="form-group">
+              <label for="origem">Origem:</label>
+              <input type="text" id="origem" name="origem" />
+            </div>
+            <div class="form-group">
+              <label for="data-afixacao">Data de afixação:</label>
+              <input type="date" id="data-afixacao" name="data-afixacao" />
             </div>
           </div>
-        </article>
+        </section>
 
-        <!-- Documentos de Identificação -->
-        <article class="card fade-in" aria-labelledby="documentos-title">
-          <div class="card-header">
-            <h2 id="documentos-title" class="card-title">Documentos de Identificação</h2>
-          </div>
-          <div class="card-body">
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Fiscal</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-add-small" type="button" aria-label="Adicionar">Adicionar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>267296809</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
+        <!-- Pedido Section -->
+        <section class="form-section card fade-in" aria-labelledby="pedido-title">
+          <h2 id="pedido-title" class="section-title">Pedido</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="ano-lectivo">Ano Lectivo:</label>
+              <select id="ano-lectivo" name="ano-lectivo">
+                <option value="">Selecione...</option>
+                <option value="2029/30">2029/30</option>
+                <option value="2028/29">2028/29</option>
+                <option value="2027/28">2027/28</option>
+                <option value="2026/27">2026/27</option>
+                <option value="2025/26">2025/26</option>
+                <option value="2024/25">2024/25</option>
+                <option value="2023/24">2023/24</option>
+                <option value="2022/23">2022/23</option>
+                <option value="2021/22">2021/22</option>
+                <option value="2020/21">2020/21</option>
+                <option value="2019/20">2019/20</option>
+                <option value="2018/19">2018/19</option>
+                <option value="2017/18">2017/18</option>
+                <option value="2016/17">2016/17</option>
+                <option value="2015/16">2015/16</option>
+                <option value="2014/15">2014/15</option>
+                <option value="2013/14">2013/14</option>
+                <option value="2012/13">2012/13</option>
+                <option value="2011/12">2011/12</option>
+              </select>
             </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Civil</h3>
-                <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>3007341</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-                <dt>Validade:</dt>
-                <dd>2026-09-08</dd>
-              </dl>
+            <div class="form-group">
+              <label for="disciplina">Disciplina:</label>
+              <input type="text" id="disciplina" name="disciplina" />
             </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Segurança Social (Caixa)</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-delete" type="button" aria-label="Apagar">Apagar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>12022823234</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
+            <div class="form-group">
+              <label for="pauta">Pauta:</label>
+              <input type="text" id="pauta" name="pauta" />
+            </div>
+            <div class="form-group full-width">
+              <label for="assunto">Assunto</label>
+              <textarea id="assunto" name="assunto" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="num-aluno">Nº Aluno:</label>
+              <input type="text" id="num-aluno" name="num-aluno" value="2133924" readonly />
+            </div>
+            <div class="form-group">
+              <label for="entidade">Entidade</label>
+              <input type="text" id="entidade" name="entidade" value="Vítor Hugo Pereira Nunes" readonly />
+            </div>
+            <div class="form-group">
+              <label for="data-pedido">Data do Pedido:</label>
+              <input type="date" id="data-pedido" name="data-pedido" />
             </div>
           </div>
-        </article>
+        </section>
 
-        <!-- Contactos -->
-        <article class="card fade-in" aria-labelledby="contactos-title">
-          <div class="card-header">
-            <h2 id="contactos-title" class="card-title">Contactos</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar contactos">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Número de telefone:</dt>
-              <dd>296 893 068</dd>
-              <dt>Número de telemóvel:</dt>
-              <dd>935 320 893</dd>
-              <dt>Email Pessoal:</dt>
-              <dd>vitornunes@gmail.com</dd>
-              <dt>Email Institucional:</dt>
-              <dd>2133924@student.uma.pt</dd>
-            </dl>
-          </div>
-        </article>
+        <!-- Info Sections -->
+        <div class="info-sections">
+          <section class="info-section card fade-in">
+            <h3 class="info-title">
+              <span class="info-icon" aria-hidden="true">i</span>
+              Emolumentos do Processo
+            </h3>
+          </section>
 
-        <!-- Morada -->
-        <article class="card fade-in" aria-labelledby="morada-title">
-          <div class="card-header">
-            <h2 id="morada-title" class="card-title">Morada</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar morada">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Morada de Correspondência:</dt>
-              <dd>
-                Impasse Cova do Arco, Arco da Calheta N°68<br>
-                8937-030 Arco da Calheta<br>
-                Portugal
-              </dd>
-            </dl>
-          </div>
-        </article>
-      </section>
+          <section class="info-section card fade-in">
+            <h3 class="info-title">
+              <span class="info-icon" aria-hidden="true">i</span>
+              Histórico dos Estados do Processo
+            </h3>
+          </section>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="button" class="btn-secondary">Limpar Campos (Novo Pedido)</button>
+          <a href="requerimentos.html" class="btn-secondary">Cancelar Processo</a>
+          <button type="submit" class="btn-primary">Guardar Processo</button>
+        </div>
+      </form>
     </main>
 
     <footer class="footer" role="contentinfo">

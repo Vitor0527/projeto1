@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataforma do Estudante — Dados Pessoais</title>
-    <link rel="stylesheet" href="css/dados-pessoais.css" />
+    <title>Plataforma do Estudante — Pautas</title>
+    <link rel="stylesheet" href="css/pautas.css" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
@@ -18,11 +18,11 @@
         <ul class="menu-list">
           <li><a href="home.html" class="menu-item">Início</a></li>
           <li>
-            <details class="menu-details" open>
+            <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
-                <li><a href="dados-pessoais.html" class="submenu-item active" aria-current="page">Dados Pessoais</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
                 <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
               </ul>
@@ -50,10 +50,10 @@
             </details>
           </li>
           <li>
-            <details class="menu-details">
+            <details class="menu-details" open>
               <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
               <ul class="submenu">
-                <li><a href="pautas.html" class="submenu-item">Pautas</a></li>
+                <li><a href="pautas.html" class="submenu-item active" aria-current="page">Pautas</a></li>
                 <li><a href="reclamacao-nota.html" class="submenu-item">Reclamação de Nota</a></li>
                 <li><a href="inqueritos.html" class="submenu-item">Inquéritos</a></li>
                 <li><a href="resultados-inqueritos.html" class="submenu-item">Resultados de Inquéritos</a></li>
@@ -121,7 +121,7 @@
           </summary>
           <div class="menu" role="menu" aria-label="Menu do utilizador">
             <div class="user-info">
-              <div class="user-name">Vítor Hugo Pereira Nunes</div>
+              <div class="user-name">Anónimo</div>
               <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
             </div>
             <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
@@ -132,142 +132,100 @@
     </header>
 
     <main id="conteudo" class="container">
-      <div class="page-header">
-        <h1 class="page-title">Dados Pessoais</h1>
-      </div>
+      <h1 class="page-title">Pautas</h1>
 
-      <section class="dados-grid">
-        <!-- Nome e Informação Biográfica -->
-        <article class="card fade-in" aria-labelledby="nome-title">
-          <div class="card-header">
-            <h2 id="nome-title" class="card-title">Nome e Informação Biográfica</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar dados">Alterar</button>
-          </div>
-          <div class="card-body">
-            <div class="profile-section">
-              <div class="profile-photo">
-                <img src="assets/avatar.jpg" alt="Foto de perfil" width="120" height="120" />
-              </div>
-              <div class="profile-info">
-                <dl class="info-list">
-                  <dt>Nome Completo:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nome Abreviado:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nomes Próprios:</dt>
-                  <dd>Vítor Hugo</dd>
-                  <dt>Apelidos:</dt>
-                  <dd>Pereira Nunes</dd>
-                  <dt>Data de Nascimento:</dt>
-                  <dd>2006-05-17</dd>
-                  <dt>Sexo:</dt>
-                  <dd>Masculino</dd>
-                  <dt>Estado Civil:</dt>
-                  <dd>Solteiro</dd>
-                  <dt>Naturalidade:</dt>
-                  <dd>Portugal (Região Autónoma da Madeira | Calheta | Arco da Calheta)</dd>
-                  <dt>Nacionalidade:</dt>
-                  <dd>Portugal</dd>
-                  <dt>Aluno N°:</dt>
-                  <dd>2133924</dd>
-                </dl>
-              </div>
+      <!-- Pesquisa de Disciplinas -->
+      <section class="search-section card fade-in" aria-labelledby="pesquisa-disciplinas-title">
+        <h2 id="pesquisa-disciplinas-title" class="section-title">Pesquisa de Disciplinas</h2>
+        <form class="search-form" action="#" method="get">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ano-lectivo">Ano Lectivo</label>
+              <select id="ano-lectivo" name="ano-lectivo">
+                <option value="2029/30">2029/30</option>
+                <option value="2028/29">2028/29</option>
+                <option value="2027/28">2027/28</option>
+                <option value="2026/27">2026/27</option>
+                <option value="2025/26" selected>2025/26</option>
+                <option value="2024/25">2024/25</option>
+                <option value="2023/24">2023/24</option>
+                <option value="2022/23">2022/23</option>
+                <option value="2021/22">2021/22</option>
+                <option value="2020/21">2020/21</option>
+                <option value="2019/20">2019/20</option>
+                <option value="2018/19">2018/19</option>
+                <option value="2017/18">2017/18</option>
+                <option value="2016/17">2016/17</option>
+                <option value="2015/16">2015/16</option>
+                <option value="2014/15">2014/15</option>
+                <option value="2013/14">2013/14</option>
+                <option value="2012/13">2012/13</option>
+                <option value="2011/12">2011/12</option>
+              </select>
             </div>
+            <button type="submit" class="btn-search">Pesquisar...</button>
           </div>
-        </article>
-
-        <!-- Documentos de Identificação -->
-        <article class="card fade-in" aria-labelledby="documentos-title">
-          <div class="card-header">
-            <h2 id="documentos-title" class="card-title">Documentos de Identificação</h2>
-          </div>
-          <div class="card-body">
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Fiscal</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-add-small" type="button" aria-label="Adicionar">Adicionar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>267296809</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="disciplina">Disciplina</label>
+              <select id="disciplina" name="disciplina">
+                <option value="">Selecione uma disciplina</option>
+                <option value="tecnicas-expressao-portugues">Técnicas de Expressão do Português_CTeSP_TPSI [S1]</option>
+                <option value="desenvolvimento-web-backend">Desenvolvimento Web - Back-End_CTeSP_TPSI [S2]</option>
+                <option value="desenvolvimento-web-frontend">Desenvolvimento Web - Front-End_CTeSP_TPSI [S2]</option>
+                <option value="design-hipermédia">Design Hipermédia_CTeSP_TPSI [S1]</option>
+                <option value="ingles-tecnico">Inglês Técnico_CTeSP_TPSI [S2]</option>
+                <option value="introducao-programacao">Introdução à Programação_CTeSP_TPSI [S1]</option>
+                <option value="matematica">Matemática_CTeSP_TPSI [S1]</option>
+                <option value="programacao-oo">Programação Orientada por Objetos_CTeSP_TPSI [S2]</option>
+                <option value="sgbd-i">Sistemas Gestores de Bases de Dados I_CTeSP_TPSI [S2]</option>
+                <option value="sistemas-operativos-redes">Sistemas Operativos e Redes_CTeSP_TPSI [S1]</option>
+              </select>
             </div>
+            <button type="submit" class="btn-search">Pesquisar...</button>
+          </div>
+        </form>
+      </section>
 
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Civil</h3>
-                <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>3007341</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-                <dt>Validade:</dt>
-                <dd>2026-09-08</dd>
-              </dl>
+      <!-- Pesquisa de Avaliações -->
+      <section class="search-section card fade-in" aria-labelledby="pesquisa-avaliacoes-title">
+        <h2 id="pesquisa-avaliacoes-title" class="section-title">Pesquisa de Avaliações</h2>
+        <form class="search-form" action="#" method="get">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tipo-avaliacao">Tipo Avaliação</label>
+              <select id="tipo-avaliacao" name="tipo-avaliacao">
+                <option value="">Selecione um tipo de avaliação</option>
+                <option value="epoca-normal">Época Normal</option>
+                <option value="epoca-recurso">Época Recurso</option>
+                <option value="epoca-especial">Época Especial</option>
+              </select>
             </div>
+            <button type="submit" class="btn-search">Pesquisar...</button>
+          </div>
+        </form>
+      </section>
 
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Segurança Social (Caixa)</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-delete" type="button" aria-label="Apagar">Apagar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>12022823234</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
-            </div>
-          </div>
-        </article>
+      <!-- Lista de Pautas -->
+      <section class="results-section card fade-in" aria-labelledby="lista-pautas-title">
+        <h2 id="lista-pautas-title" class="section-title">Lista de Pautas</h2>
+        <div class="info-message">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p>Seleccione uma disciplina e/ou tipo de avaliação!</p>
+        </div>
+      </section>
 
-        <!-- Contactos -->
-        <article class="card fade-in" aria-labelledby="contactos-title">
-          <div class="card-header">
-            <h2 id="contactos-title" class="card-title">Contactos</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar contactos">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Número de telefone:</dt>
-              <dd>296 893 068</dd>
-              <dt>Número de telemóvel:</dt>
-              <dd>935 320 893</dd>
-              <dt>Email Pessoal:</dt>
-              <dd>vitornunes@gmail.com</dd>
-              <dt>Email Institucional:</dt>
-              <dd>2133924@student.uma.pt</dd>
-            </dl>
-          </div>
-        </article>
-
-        <!-- Morada -->
-        <article class="card fade-in" aria-labelledby="morada-title">
-          <div class="card-header">
-            <h2 id="morada-title" class="card-title">Morada</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar morada">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Morada de Correspondência:</dt>
-              <dd>
-                Impasse Cova do Arco, Arco da Calheta N°68<br>
-                8937-030 Arco da Calheta<br>
-                Portugal
-              </dd>
-            </dl>
-          </div>
-        </article>
+      <!-- Alunos associados às pautas -->
+      <section class="results-section card fade-in" aria-labelledby="alunos-pautas-title">
+        <h2 id="alunos-pautas-title" class="section-title">Alunos associados às pautas</h2>
+        <div class="info-message">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p>Seleccione uma ou mais pautas!</p>
+        </div>
+        <div class="info-message">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p>Sem resultados</p>
+        </div>
       </section>
     </main>
 

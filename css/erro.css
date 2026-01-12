@@ -1,0 +1,98 @@
+/* Error page specific styles */
+
+@import url("common.css");
+
+/* Error State */
+.error-state {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 2rem;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+	gap: 2rem;
+	min-height: 60vh;
+}
+
+.error-illustration {
+	width: 100%;
+	max-width: 400px;
+	color: color-mix(in oklab, var(--error), transparent 70%);
+}
+
+.illustration-svg {
+	width: 100%;
+	height: auto;
+}
+
+.error-content {
+	display: grid;
+	gap: 1rem;
+}
+
+.error-title {
+	margin: 0;
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--text);
+}
+
+.error-subtitle {
+	margin: 0;
+	font-size: 1.1rem;
+	color: var(--muted);
+	line-height: 1.5;
+}
+
+.error-actions {
+	margin-top: 1rem;
+}
+
+.btn-home {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 1.5rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition: transform 0.05s ease, filter 0.15s ease;
+}
+
+.btn-home:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+	text-decoration: none;
+}
+
+.btn-home:active {
+	transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.error-state {
+		padding: 2rem 1.5rem;
+		gap: 1.5rem;
+		min-height: 50vh;
+	}
+
+	.error-title {
+		font-size: 1.5rem;
+	}
+
+	.error-subtitle {
+		font-size: 1rem;
+	}
+
+	.btn-home {
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma do Estudante — Pagamentos</title>
+    <link rel="stylesheet" href="css/pagamentos.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    
+    <!-- Menu Toggle Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
+    
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav" aria-label="Navegação principal">
+        <ul class="menu-list">
+          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Geral <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="processos.html" class="submenu-item">Processos</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
+                <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
+                <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details" open>
+              <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="pagamentos.html" class="submenu-item active" aria-current="page">Pagamentos</a></li>
+                <li><a href="matriculas-inscricoes.html" class="submenu-item">Matrículas/Inscrições</a></li>
+                <li><a href="inscricao-turmas.html" class="submenu-item">Inscrição em Turmas</a></li>
+                <li><a href="#" class="submenu-item">Requerimentos</a></li>
+                <li><a href="cartao-universitario.html" class="submenu-item">Cartão Universitário</a></li>
+                <li><a href="erro.html" class="submenu-item">SASUMa-Bolsas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Concursos <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="concursos.html" class="submenu-item">Candidaturas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="pautas.html" class="submenu-item">Pautas</a></li>
+                <li><a href="reclamacao-nota.html" class="submenu-item">Reclamação de Nota</a></li>
+                <li><a href="inqueritos.html" class="submenu-item">Inquéritos</a></li>
+                <li><a href="resultados-inqueritos.html" class="submenu-item">Resultados de Inquéritos</a></li>
+                <li><a href="#" class="submenu-item">Inquérito RAIDES</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Creditações <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Documentos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Aula <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Disciplina <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Curso <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Instituição <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li><a href="#" class="menu-item">Eleições</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile (clickable to close) -->
+    <label for="menu-toggle" class="sidebar-overlay" aria-label="Fechar menu"></label>
+
+    <header class="topbar" role="banner">
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+      <div class="topbar__brand">
+        <div class="logo-container">
+          <img class="logo-light" src="assets/logo1.png" alt="UMA" width="120" height="40" />
+          <img class="logo-dark" src="assets/logo.png" alt="UMA" width="120" height="40" />
+        </div>
+        <span class="title">Plataforma</span>
+      </div>
+      <div class="topbar__user">
+        <details class="user-menu">
+          <summary class="user-trigger" aria-label="Abrir menu do utilizador">
+            <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de perfil" width="32" height="32" />
+          </summary>
+          <div class="menu" role="menu" aria-label="Menu do utilizador">
+            <div class="user-info">
+              <div class="user-name">Anónimo</div>
+              <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
+            </div>
+            <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
+            <a class="menu-item" role="menuitem" href="login.html">Sair</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <div class="page-header">
+        <h1 class="page-title">Filtrar Pagamentos</h1>
+        <div class="total-debt">
+          <span class="total-label">Total em Dívida</span>
+          <span class="total-amount">433.20 EUR</span>
+        </div>
+      </div>
+
+      <section class="filter-section card fade-in" aria-labelledby="filter-title">
+        <h2 id="filter-title" class="visually-hidden">Filtros de pagamento</h2>
+        <form class="filter-form" action="#" method="get">
+          <div class="filter-group">
+            <label for="ano-lectivo">Ano Lectivo</label>
+            <select id="ano-lectivo" name="ano-lectivo">
+              <option value="">Selecione...</option>
+              <option value="2025/26" selected>2025/26</option>
+              <option value="2024/25">2024/25</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="situacao">Situação do Pagamento</label>
+            <select id="situacao" name="situacao">
+              <option value="">Selecione...</option>
+              <option value="cancelado">Cancelado</option>
+              <option value="pagos">Pagos</option>
+              <option value="por-pagar" selected>Por Pagar</option>
+              <option value="reembolsos">Reembolsos</option>
+              <option value="substituido">Substituído por Prestações</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-search">Pesquisar...</button>
+        </form>
+      </section>
+
+      <section class="payments-section card fade-in" aria-labelledby="payments-title">
+        <h2 id="payments-title" class="visually-hidden">Lista de pagamentos</h2>
+        <div class="table-wrapper">
+          <table class="table table-pagamentos" role="table" aria-label="Lista de pagamentos">
+            <thead>
+              <tr>
+                <th scope="col">AL</th>
+                <th scope="col">B</th>
+                <th scope="col">Refª MB</th>
+                <th scope="col">Serviço</th>
+                <th scope="col">Obs</th>
+                <th scope="col">Data Emissão</th>
+                <th scope="col">Data Lim.</th>
+                <th scope="col">Data Pag.</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Pagar c/ Cartão de Crédito</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392405</td>
+                <td>5ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-01-31</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392405" aria-label="Pagar 213392405 com cartão de crédito" /></td>
+              </tr>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392406</td>
+                <td>6ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-02-28</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392406" aria-label="Pagar 213392406 com cartão de crédito" /></td>
+              </tr>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392407</td>
+                <td>7ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-03-31</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392407" aria-label="Pagar 213392407 com cartão de crédito" /></td>
+              </tr>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392408</td>
+                <td>8ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-04-30</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392408" aria-label="Pagar 213392408 com cartão de crédito" /></td>
+              </tr>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392422</td>
+                <td>9ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-05-31</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392422" aria-label="Pagar 213392422 com cartão de crédito" /></td>
+              </tr>
+              <tr>
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392423</td>
+                <td>10ª Prestação de Propinas de CET's</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2026-06-30</td>
+                <td>-</td>
+                <td>69.70 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392423" aria-label="Pagar 213392423 com cartão de crédito" /></td>
+              </tr>
+              <tr class="row-overdue">
+                <td>2025/26</td>
+                <td>S</td>
+                <td>213392413</td>
+                <td>Coima - Até 15 dias seguidos após o termo do prazo</td>
+                <td></td>
+                <td>2025-09-29</td>
+                <td>2025-10-11</td>
+                <td>-</td>
+                <td>15.00 EUR</td>
+                <td><input type="checkbox" name="pagamento[]" value="213392413" aria-label="Pagar 213392413 com cartão de crédito" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="payment-options fade-in" aria-label="Opções de pagamento">
+        <div class="options-grid">
+          <!-- Opção 1: Multibanco -->
+          <article class="payment-option card">
+            <h2 class="option-title">Opção 1 - Pagamento via Multibanco - Pagamento de Serviços</h2>
+            <div class="option-content">
+              <div class="option-logo mb-logo" aria-hidden="true">
+                <span class="logo-text">MB MULTIBANCO</span>
+              </div>
+              <p class="option-description">
+                Através da SIBS, pode proceder aos pagamentos utilizando as referências listadas. Quer seja por Multibanco ou através de homebanking.
+              </p>
+              
+              <div class="option-section">
+                <h3 class="option-subtitle">Processamento de Transações - NÃO IMEDIATO</h3>
+                <ul class="option-list">
+                  <li>Tem de efectuar um pagamento de cada vez.</li>
+                  <li>O processamento é efectuado pelo sistema todos os dias pelas 22h00, pelo que só depois de efectuado este processamento o InfoAlunos reflectirá a conta-corrente actual do Aluno.</li>
+                </ul>
+              </div>
+
+              <div class="option-section">
+                <h3 class="option-subtitle">Processo de Pagamento</h3>
+                <ul class="option-list">
+                  <li>No Multibanco ou homebanking, seleccione "Pagamento de Serviços".</li>
+                  <li>Como Entidade introduza <strong>20697</strong>, como referência, utilize a Refª MB acima listada.</li>
+                </ul>
+              </div>
+
+              <div class="option-section">
+                <h3 class="option-subtitle">Atenção - Data Limite de Pagamento Ultrapassada</h3>
+                <ul class="option-list">
+                  <li>Se for <strong>ultrapassada a data</strong> limite de pagamento serão aplicados juros de mora à taxa legal em vigor.</li>
+                  <li>Depois do pagamento, e de forma automática, é criado um <strong>novo registo para pagamento</strong> com o valor dos juros de mora calculados.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Opção 2: Cartão de Crédito -->
+          <article class="payment-option card">
+            <h2 class="option-title">Opção 2 - Pagamento via Cartão de Crédito</h2>
+            <div class="option-content">
+              <div class="option-logo credit-logo" aria-hidden="true">
+                <span class="logo-text">redunicre</span>
+                <div class="card-logos">
+                  <span class="visa-logo">VISA</span>
+                  <span class="mastercard-logo">Mastercard</span>
+                </div>
+              </div>
+              <p class="option-description">
+                Através da REDUNICRE, pode proceder aos pagamentos via Cartão de Crédito. Se quiser pode gerar um MBNet para usar esta modalidade.
+              </p>
+              
+              <div class="option-section">
+                <h3 class="option-subtitle">Processamento de Transações - IMEDIATO</h3>
+                <ul class="option-list">
+                  <li>Pode pagar vários produtos de uma vez só.</li>
+                  <li>Ao regressar ao InfoAlunos, terá imediatamente os seus dados actualizados.</li>
+                </ul>
+              </div>
+
+              <div class="option-section">
+                <h3 class="option-subtitle">Processo de Pagamento</h3>
+                <ul class="option-list">
+                  <li>Na tabela desta página, clique nas linhas correspondentes, a coluna "Pagar via Cartão de Crédito".</li>
+                  <li>Clique no botão "Iniciar Pagamento".</li>
+                </ul>
+              </div>
+
+              <div class="option-section">
+                <h3 class="option-subtitle">Atenção - Data Limite de Pagamento Ultrapassada</h3>
+                <ul class="option-list">
+                  <li>Se for <strong>ultrapassada a data</strong> limite de pagamento serão aplicados juros de mora à taxa legal em vigor.</li>
+                  <li>Depois do pagamento, e de forma automática, é criado um <strong>novo registo para pagamento</strong> com o valor dos juros de mora calculados.</li>
+                </ul>
+              </div>
+
+              <button type="button" class="btn-payment">Iniciar Pagamento</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>© Universidade da Madeira — Projeto académico</p>
+    </footer>
+  </body>
+</html>
+

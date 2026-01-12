@@ -1,0 +1,361 @@
+/* Pagamentos page specific styles */
+
+@import url("common.css");
+
+/* Page Header */
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.total-debt {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.25rem;
+}
+
+.total-label {
+	font-size: 0.875rem;
+	color: var(--muted);
+	font-weight: 600;
+}
+
+.total-amount {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--text);
+}
+
+/* Filter Section */
+.filter-section {
+	margin-bottom: 1.5rem;
+}
+
+.filter-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	gap: 1rem;
+	align-items: end;
+}
+
+.filter-group {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.filter-group label {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--text);
+}
+
+.filter-group select {
+	width: 100%;
+	padding: 0.65rem 0.8rem;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background: light-dark(#f9fafb, #0f1114);
+	color: var(--text);
+	font: inherit;
+	outline: none;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234b5563' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.8rem center;
+	background-size: 12px;
+	padding-right: 2.5rem;
+}
+
+.filter-group select:focus-visible {
+	border-color: var(--focus);
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--focus), transparent 75%);
+}
+
+.btn-search {
+	padding: 0.65rem 1.4rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.05s ease, filter 0.15s ease;
+	white-space: nowrap;
+}
+
+.btn-search:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+}
+
+.btn-search:active {
+	transform: translateY(1px);
+}
+
+/* Payments Table Section */
+.payments-section {
+	margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+}
+
+.table-wrapper::-webkit-scrollbar {
+	height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+	background: color-mix(in oklab, var(--primary), transparent 60%);
+	border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+	background: color-mix(in oklab, var(--primary), transparent 40%);
+}
+
+.table-pagamentos {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: 0.95rem;
+	table-layout: auto;
+}
+
+.table-pagamentos th {
+	background: color-mix(in oklab, var(--surface), black 5%);
+	font-weight: 600;
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 2px solid var(--border);
+	white-space: nowrap;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.table-pagamentos td {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.table-pagamentos tbody tr:is(:hover, :focus-within) {
+	background: color-mix(in oklab, var(--primary), transparent 90%);
+}
+
+.table-pagamentos tbody tr.row-overdue {
+	color: var(--error);
+	font-weight: 600;
+}
+
+.table-pagamentos tbody tr.row-overdue td {
+	color: var(--error);
+}
+
+.table-pagamentos input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
+	accent-color: var(--primary);
+}
+
+/* Payment Options Section */
+.payment-options {
+	margin-top: 2rem;
+}
+
+.options-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+@media (width >= 900px) {
+	.options-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.payment-option {
+	padding: 1.5rem;
+}
+
+.option-title {
+	margin: 0 0 1rem;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--text);
+}
+
+.option-content {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.option-logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	border-radius: 8px;
+	background: color-mix(in oklab, var(--surface), black 3%);
+}
+
+.mb-logo {
+	background: color-mix(in oklab, #0066cc, transparent 90%);
+}
+
+.mb-logo .logo-text {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #0066cc;
+	letter-spacing: 0.05em;
+}
+
+.credit-logo {
+	background: color-mix(in oklab, #c8102e, transparent 95%);
+}
+
+.credit-logo .logo-text {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #c8102e;
+	text-transform: lowercase;
+	margin-bottom: 0.5rem;
+}
+
+.card-logos {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 0.5rem;
+}
+
+.visa-logo,
+.mastercard-logo {
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+}
+
+.visa-logo {
+	background: #1a1f71;
+	color: #ffffff;
+}
+
+.mastercard-logo {
+	background: #eb001b;
+	color: #ffffff;
+}
+
+.option-description {
+	margin: 0;
+	color: var(--text);
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.option-section {
+	margin-top: 0.5rem;
+}
+
+.option-subtitle {
+	margin: 0 0 0.75rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.option-list {
+	margin: 0;
+	padding-left: 1.25rem;
+	color: var(--text);
+	font-size: 0.95rem;
+	line-height: 1.6;
+	list-style: disc;
+}
+
+.option-list li {
+	margin-bottom: 0.5rem;
+}
+
+.option-list li:last-child {
+	margin-bottom: 0;
+}
+
+.option-list strong {
+	font-weight: 700;
+	color: var(--text);
+}
+
+.btn-payment {
+	margin-top: 0.5rem;
+	padding: 0.8rem 1.5rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 0.05s ease, filter 0.15s ease;
+	width: 100%;
+}
+
+.btn-payment:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+}
+
+.btn-payment:active {
+	transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.page-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.total-debt {
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	.filter-form {
+		grid-template-columns: 1fr;
+	}
+
+	.table-pagamentos {
+		font-size: 0.85rem;
+	}
+
+	.table-pagamentos th,
+	.table-pagamentos td {
+		padding: 0.5rem 0.6rem;
+	}
+
+	.payment-option {
+		padding: 1rem;
+	}
+}
+

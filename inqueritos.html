@@ -3,28 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataforma do Estudante — Ajuda</title>
-    <link rel="stylesheet" href="css/ajuda.css" />
+    <title>Plataforma do Estudante — Inquéritos</title>
+    <link rel="stylesheet" href="css/inqueritos.css" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
-
+    
     <!-- Menu Toggle Checkbox -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
-
+    
     <!-- Sidebar Menu -->
     <aside class="sidebar" id="sidebar">
       <nav class="sidebar-nav" aria-label="Navegação principal">
         <ul class="menu-list">
           <li><a href="home.html" class="menu-item">Início</a></li>
           <li>
-            <details class="menu-details" open>
+            <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
                 <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
-                <li><a href="ajuda.html" class="submenu-item active" aria-current="page">Ajuda</a></li>
+                <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
               </ul>
             </details>
           </li>
@@ -50,12 +50,12 @@
             </details>
           </li>
           <li>
-            <details class="menu-details">
+            <details class="menu-details" open>
               <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="pautas.html" class="submenu-item">Pautas</a></li>
                 <li><a href="reclamacao-nota.html" class="submenu-item">Reclamação de Nota</a></li>
-                <li><a href="inqueritos.html" class="submenu-item">Inquéritos</a></li>
+                <li><a href="inqueritos.html" class="submenu-item active" aria-current="page">Inquéritos</a></li>
                 <li><a href="resultados-inqueritos.html" class="submenu-item">Resultados de Inquéritos</a></li>
                 <li><a href="#" class="submenu-item">Inquérito RAIDES</a></li>
               </ul>
@@ -132,95 +132,37 @@
     </header>
 
     <main id="conteudo" class="container">
-      <div class="page-header">
-        <h1 class="page-title">Contactos e Ajuda</h1>
-        <p class="page-subtitle">
-          Se tiver dúvidas sobre a utilização da plataforma ou sobre processos académicos, utilize os contactos abaixo ou envie-nos uma mensagem através do formulário.
-        </p>
-      </div>
+      <h1 class="page-title">Inquéritos</h1>
 
-      <section class="ajuda-grid" aria-label="Contactos e formulário de contacto">
-        <!-- Coluna de contactos -->
-        <article class="card ajuda-card fade-in" aria-labelledby="contactos-title">
-          <h2 id="contactos-title" class="card-title">Contactos</h2>
-          <div class="card-body ajuda-contactos">
-            <section class="contacto-bloco" aria-label="Reitoria da Universidade da Madeira">
-              <h3 class="contacto-titulo">Reitoria da Universidade da Madeira</h3>
-              <p class="contacto-texto">
-                Colégio dos Jesuítas — Rua dos Ferreiros<br />
-                9000-082 Funchal
-              </p>
-              <p class="contacto-texto">
-                Tel: <a href="tel:+351291209400">(+351) 291 209400</a><br />
-                Email: <a href="mailto:gabinete@reitoria.uma.pt">gabinete@reitoria.uma.pt</a>
-              </p>
-            </section>
-
-            <section class="contacto-bloco" aria-label="Campus Universitário da Penteada">
-              <h3 class="contacto-titulo">Campus Universitário da Penteada</h3>
-              <p class="contacto-texto">
-                Caminho da Penteada 9020-105 Funchal<br />
-                Tel: <a href="tel:+351291705000">(+351) 291 705000</a>
-              </p>
-            </section>
-
-            <section class="contacto-bloco" aria-label="Gabinete de Apoio ao Estudante">
-              <h3 class="contacto-titulo">Gabinete de Apoio ao Estudante</h3>
-              <p class="contacto-texto">
-                Campus Universitário da Penteada<br />
-                9020-105 Funchal
-              </p>
-              <p class="contacto-texto">
-                Tel: <a href="tel:+351291705270">(+351) 291 705270</a><br />
-                URL: <a href="#">www.uma.pt</a><br />
-                Email: <a href="mailto:apoio.estudante@mail.uma.pt">apoio.estudante@mail.uma.pt</a>
-              </p>
-            </section>
+      <!-- Pesquisa de Inquéritos -->
+      <section class="search-section card fade-in" aria-labelledby="pesquisa-inqueritos-title">
+        <h2 id="pesquisa-inqueritos-title" class="section-title">Pesquisa de Inquéritos</h2>
+        <form class="search-form" action="#" method="get">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inquerito">Inquérito</label>
+              <select id="inquerito" name="inquerito">
+                <option value="">Selecione um inquérito</option>
+                <option value="inquerito-pedagogico">Inquérito Pedagógico aos Alunos / Survey to Students 2024/2546</option>
+                <option value="design-hipermédia">Design Hipermédia</option>
+                <option value="introducao-programacao">Introdução à Programação</option>
+                <option value="matematica">Matemática</option>
+                <option value="sistemas-operativos-redes">Sistemas Operativos e Redes</option>
+                <option value="tecnicas-expressao-portugues">Técnicas de Expressão do Português</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-search">Pesquisar...</button>
           </div>
-        </article>
+        </form>
+      </section>
 
-        <!-- Coluna de formulário -->
-        <article class="card ajuda-card fade-in" aria-labelledby="form-title">
-          <h2 id="form-title" class="card-title">Contacto direto</h2>
-          <div class="card-body">
-            <p class="form-intro">
-              Se preferir, pode contactar-nos diretamente a partir deste formulário. Selecione o destinatário, escreva a mensagem e está feito.
-            </p>
-
-            <form class="ajuda-form" action="#" method="post">
-              <div class="field">
-                <label for="para">Para</label>
-                <select id="para" name="para">
-                  <option>Gabinete de Apoio ao Estudante</option>
-                  <option>Serviços Académicos</option>
-                  <option>Serviços de Informática</option>
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="nome">Nome</label>
-                <input id="nome" name="nome" type="text" placeholder="O seu nome" required />
-              </div>
-
-              <div class="field">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="o.seu.email@exemplo.pt" required />
-              </div>
-
-              <div class="field">
-                <label for="assunto">Assunto</label>
-                <input id="assunto" name="assunto" type="text" placeholder="Motivo do contacto" required />
-              </div>
-
-              <div class="field">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva aqui a sua mensagem" required></textarea>
-              </div>
-
-              <button class="btn-submit" type="submit">Enviar</button>
-            </form>
-          </div>
-        </article>
+      <!-- Inquérito - Detalhe -->
+      <section class="results-section card fade-in" aria-labelledby="inquerito-detalhe-title">
+        <h2 id="inquerito-detalhe-title" class="section-title">Inquérito - Detalhe</h2>
+        <div class="info-message">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p>Deve ser seleccionado o inquérito ou o Utilizador não tem acesso ao inquérito escolhido.</p>
+        </div>
       </section>
     </main>
 
@@ -229,5 +171,4 @@
     </footer>
   </body>
 </html>
-
 

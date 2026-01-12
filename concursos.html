@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plataforma do Estudante — Concursos</title>
+    <link rel="stylesheet" href="css/concursos.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    
+    <!-- Menu Toggle Checkbox -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" aria-label="Abrir menu" />
+    
+    <!-- Sidebar Menu -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav" aria-label="Navegação principal">
+        <ul class="menu-list">
+          <li><a href="home.html" class="menu-item">Início</a></li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Geral <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="processos.html" class="submenu-item">Processos</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
+                <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
+                <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="pagamentos.html" class="submenu-item">Pagamentos</a></li>
+                <li><a href="matriculas-inscricoes.html" class="submenu-item">Matrículas/Inscrições</a></li>
+                <li><a href="inscricao-turmas.html" class="submenu-item">Inscrição em Turmas</a></li>
+                <li><a href="requerimentos.html" class="submenu-item">Requerimentos</a></li>
+                <li><a href="cartao-universitario.html" class="submenu-item">Cartão Universitário</a></li>
+                <li><a href="erro.html" class="submenu-item">SASUMa-Bolsas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details" open>
+              <summary class="menu-item">Concursos <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="concursos.html" class="submenu-item active" aria-current="page">Candidaturas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Avaliação <span class="arrow">›</span></summary>
+              <ul class="submenu">
+                <li><a href="pautas.html" class="submenu-item">Pautas</a></li>
+                <li><a href="reclamacao-nota.html" class="submenu-item">Reclamação de Nota</a></li>
+                <li><a href="inqueritos.html" class="submenu-item">Inquéritos</a></li>
+                <li><a href="resultados-inqueritos.html" class="submenu-item">Resultados de Inquéritos</a></li>
+                <li><a href="#" class="submenu-item">Inquérito RAIDES</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Creditações <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Documentos <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Aula <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Disciplina <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Curso <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li>
+            <details class="menu-details">
+              <summary class="menu-item">Instituição <span class="arrow">›</span></summary>
+            </details>
+          </li>
+          <li><a href="#" class="menu-item">Eleições</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile (clickable to close) -->
+    <label for="menu-toggle" class="sidebar-overlay" aria-label="Fechar menu"></label>
+
+    <header class="topbar" role="banner">
+      <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+      <div class="topbar__brand">
+        <div class="logo-container">
+          <img class="logo-light" src="assets/logo1.png" alt="UMA" width="120" height="40" />
+          <img class="logo-dark" src="assets/logo.png" alt="UMA" width="120" height="40" />
+        </div>
+        <span class="title">Plataforma</span>
+      </div>
+      <div class="topbar__user">
+        <details class="user-menu">
+          <summary class="user-trigger" aria-label="Abrir menu do utilizador">
+            <img class="avatar-img" src="assets/avatar.jpg" alt="Foto de perfil" width="32" height="32" />
+          </summary>
+          <div class="menu" role="menu" aria-label="Menu do utilizador">
+            <div class="user-info">
+              <div class="user-name">Anónimo</div>
+              <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
+            </div>
+            <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
+            <a class="menu-item" role="menuitem" href="login.html">Sair</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <div class="page-header">
+        <h1 class="page-title">Candidaturas</h1>
+        <div class="search-section">
+          <input type="text" class="search-input" placeholder="Pesquisar..." />
+          <button type="button" class="btn-search">Pesquisar</button>
+        </div>
+      </div>
+
+      <section class="filter-section card fade-in" aria-labelledby="filter-title">
+        <h2 id="filter-title" class="visually-hidden">Filtros de candidaturas</h2>
+        <form class="filter-form" action="#" method="get">
+          <div class="filter-group">
+            <label for="concurso">Concurso</label>
+            <select id="concurso" name="concurso">
+              <option value="">Selecione...</option>
+              <option value="doutoramento-2025" selected>2025/26 | Doutoramento 2025/26 | 1ª Fase</option>
+              <option value="doutoramento-ilhas">2025/26 | Doutoramentos em Ilhas Atlânticas e em Literaturas e Culturas Insulares | 1ª Fase</option>
+              <option value="microcredencial">2025/26 | Microcredencial Segurança Informática | | 1ª Fase</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="curso">Curso</label>
+            <select id="curso" name="curso">
+              <option value="">Selecione...</option>
+              <option value="ciencias-biologicas" selected>3º Ciclo | Ciências Biológicas</option>
+              <option value="eng-eletrotecnica">3º Ciclo | Engenharia Eletrotécnica</option>
+              <option value="eng-informatica">3º Ciclo | Engenharia Informática</option>
+              <option value="fisica">3º Ciclo | Física</option>
+              <option value="ilhas-atlanticas">3º Ciclo | Ilhas Atlânticas: História, Património e Quadro Jurídico-Institucional</option>
+              <option value="literaturas">3º Ciclo | Literaturas e Culturas Insulares</option>
+              <option value="quimica">3º Ciclo | Química</option>
+              <option value="seguranca-info">Microcredencial | Segurança Informática I</option>
+            </select>
+          </div>
+        </form>
+      </section>
+
+      <section class="concursos-section card fade-in" aria-labelledby="concursos-title">
+        <h2 id="concursos-title" class="visually-hidden">Lista de concursos</h2>
+        <div class="table-wrapper">
+          <table class="table table-concursos" role="table" aria-label="Lista de concursos e candidaturas">
+            <thead>
+              <tr>
+                <th scope="col">Concurso</th>
+                <th scope="col">Fase</th>
+                <th scope="col">Tipo Curso</th>
+                <th scope="col">Curso</th>
+                <th scope="col">Vagas</th>
+                <th scope="col">Candidatura</th>
+                <th scope="col">Cand. Aluno</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramentos em Ilhas Atlânticas e em Literaturas e Culturas Insulares
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Ilhas Atlânticas: História, Património e Quadro Jurídico-Institucional</td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-01-07</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramentos em Ilhas Atlânticas e em Literaturas e Culturas Insulares
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Literaturas e Culturas Insulares</td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-01-07</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Microcredencial Segurança Informática I
+                </td>
+                <td>1ª Fase</td>
+                <td>Micro</td>
+                <td>Segurança Informática I</td>
+                <td>200</td>
+                <td>De 2025-12-20 a 2026-01-20</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramento 2025/26
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Ciências Biológicas</td>
+                <td>10</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramento 2025/26
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Engenharia Eletrotécnica</td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramento 2025/26
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Engenharia Informática</td>
+                <td>10</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramento 2025/26
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Física</td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="btn-expand" aria-label="Expandir detalhes">[+]</button>
+                  Doutoramento 2025/26
+                </td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td>Química</td>
+                <td>10</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td><a href="#" class="link-candidatura">Preencher Candidatura</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>© Universidade da Madeira — Projeto académico</p>
+    </footer>
+  </body>
+</html>
+

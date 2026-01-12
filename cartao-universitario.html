@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataforma do Estudante — Dados Pessoais</title>
-    <link rel="stylesheet" href="css/dados-pessoais.css" />
+    <title>Plataforma do Estudante — Cartão Universitário</title>
+    <link rel="stylesheet" href="css/cartao-universitario.css" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
@@ -18,25 +18,25 @@
         <ul class="menu-list">
           <li><a href="home.html" class="menu-item">Início</a></li>
           <li>
-            <details class="menu-details" open>
+            <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
-                <li><a href="dados-pessoais.html" class="submenu-item active" aria-current="page">Dados Pessoais</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
                 <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
               </ul>
             </details>
           </li>
           <li>
-            <details class="menu-details">
+            <details class="menu-details" open>
               <summary class="menu-item">Serviços <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="pagamentos.html" class="submenu-item">Pagamentos</a></li>
                 <li><a href="matriculas-inscricoes.html" class="submenu-item">Matrículas/Inscrições</a></li>
                 <li><a href="inscricao-turmas.html" class="submenu-item">Inscrição em Turmas</a></li>
                 <li><a href="requerimentos.html" class="submenu-item">Requerimentos</a></li>
-                <li><a href="cartao-universitario.html" class="submenu-item">Cartão Universitário</a></li>
+                <li><a href="cartao-universitario.html" class="submenu-item active" aria-current="page">Cartão Universitário</a></li>
                 <li><a href="erro.html" class="submenu-item">SASUMa-Bolsas</a></li>
               </ul>
             </details>
@@ -121,7 +121,7 @@
           </summary>
           <div class="menu" role="menu" aria-label="Menu do utilizador">
             <div class="user-info">
-              <div class="user-name">Vítor Hugo Pereira Nunes</div>
+              <div class="user-name">Anónimo</div>
               <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
             </div>
             <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
@@ -133,141 +133,96 @@
 
     <main id="conteudo" class="container">
       <div class="page-header">
-        <h1 class="page-title">Dados Pessoais</h1>
+        <h1 class="page-title">Dados para emissão do Cartão</h1>
       </div>
 
-      <section class="dados-grid">
-        <!-- Nome e Informação Biográfica -->
-        <article class="card fade-in" aria-labelledby="nome-title">
-          <div class="card-header">
-            <h2 id="nome-title" class="card-title">Nome e Informação Biográfica</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar dados">Alterar</button>
-          </div>
-          <div class="card-body">
-            <div class="profile-section">
-              <div class="profile-photo">
-                <img src="assets/avatar.jpg" alt="Foto de perfil" width="120" height="120" />
+      <section class="card-content fade-in">
+        <div class="card-layout">
+          <!-- Left Section: Personal Details -->
+          <div class="details-section">
+            <dl class="details-list">
+              <div class="detail-item">
+                <dt>Nome</dt>
+                <dd>Vítor Hugo Pereira Nunes</dd>
               </div>
-              <div class="profile-info">
-                <dl class="info-list">
-                  <dt>Nome Completo:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nome Abreviado:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nomes Próprios:</dt>
-                  <dd>Vítor Hugo</dd>
-                  <dt>Apelidos:</dt>
-                  <dd>Pereira Nunes</dd>
-                  <dt>Data de Nascimento:</dt>
-                  <dd>2006-05-17</dd>
-                  <dt>Sexo:</dt>
-                  <dd>Masculino</dd>
-                  <dt>Estado Civil:</dt>
-                  <dd>Solteiro</dd>
-                  <dt>Naturalidade:</dt>
-                  <dd>Portugal (Região Autónoma da Madeira | Calheta | Arco da Calheta)</dd>
-                  <dt>Nacionalidade:</dt>
-                  <dd>Portugal</dd>
-                  <dt>Aluno N°:</dt>
-                  <dd>2133924</dd>
-                </dl>
+              <div class="detail-item">
+                <dt>Não especificado</dt>
+                <dd>30073248</dd>
               </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Documentos de Identificação -->
-        <article class="card fade-in" aria-labelledby="documentos-title">
-          <div class="card-header">
-            <h2 id="documentos-title" class="card-title">Documentos de Identificação</h2>
-          </div>
-          <div class="card-body">
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Fiscal</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-add-small" type="button" aria-label="Adicionar">Adicionar</button>
-                </div>
+              <div class="detail-item">
+                <dt>Departamento</dt>
+                <dd>ESTG</dd>
               </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>267296809</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
-            </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Civil</h3>
-                <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
+              <div class="detail-item">
+                <dt>Curso</dt>
+                <dd>Tec Pro Sis Inf</dd>
               </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>3007341</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-                <dt>Validade:</dt>
-                <dd>2026-09-08</dd>
-              </dl>
-            </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Segurança Social (Caixa)</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-delete" type="button" aria-label="Apagar">Apagar</button>
-                </div>
+              <div class="detail-item">
+                <dt>Morada</dt>
+                <dd>
+                  Impasse Cova do Arco, Arco da Calheta N°36<br />
+                  9370-060 Arco da Calheta<br />
+                  Portugal
+                </dd>
               </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>12022823234</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
-            </div>
-          </div>
-        </article>
-
-        <!-- Contactos -->
-        <article class="card fade-in" aria-labelledby="contactos-title">
-          <div class="card-header">
-            <h2 id="contactos-title" class="card-title">Contactos</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar contactos">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Número de telefone:</dt>
-              <dd>296 893 068</dd>
-              <dt>Número de telemóvel:</dt>
-              <dd>935 320 893</dd>
-              <dt>Email Pessoal:</dt>
-              <dd>vitornunes@gmail.com</dd>
-              <dt>Email Institucional:</dt>
-              <dd>2133924@student.uma.pt</dd>
             </dl>
           </div>
-        </article>
 
-        <!-- Morada -->
-        <article class="card fade-in" aria-labelledby="morada-title">
-          <div class="card-header">
-            <h2 id="morada-title" class="card-title">Morada</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar morada">Alterar</button>
+          <!-- Right Section: Card Preview and Actions -->
+          <div class="card-preview-section">
+            <!-- University Card Preview -->
+            <div class="university-card" aria-label="Pré-visualização do cartão universitário">
+              <div class="card-header">
+                <span class="card-university-name">UNIVERSIDADE DA MADEIRA</span>
+                <div class="card-photo">
+                  <img src="assets/avatar.jpg" alt="Foto do estudante" width="80" height="100" />
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-nfc-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                    <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+                  </svg>
+                </div>
+                <div class="card-number">0000 0000 0000 0000</div>
+                <div class="card-name">VITOR HUGO</div>
+                <div class="card-footer">
+                  <div class="card-left">
+                    <div class="card-role">Aluno</div>
+                    <div class="card-course">Tec Pro Sis Inf</div>
+                  </div>
+                  <div class="card-right">
+                    <div class="card-id">2133924</div>
+                    <div class="card-expiry">12/2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status -->
+            <div class="status-section">
+              <h2 class="status-title">Estado atual</h2>
+              <p class="status-text">Cartão Expedido para a UMa</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="actions-section">
+              <button type="button" class="btn-action">CONFIRMAR ENTREGA</button>
+              <button type="button" class="btn-action">CARTÃO DISPONÍVEL PARA LEVANTAMENTO</button>
+            </div>
+
+            <!-- Alert Section -->
+            <div class="alert-section card fade-in" role="alert">
+              <h3 class="alert-title">Alertas!</h3>
+              <div class="alert-content">
+                <div class="alert-icon" aria-hidden="true">ℹ</div>
+                <p class="alert-text">
+                  Atenção. A validade do seu cartão atual terminou em 2025-12-31. Deverá pedir a sua renovação.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Morada de Correspondência:</dt>
-              <dd>
-                Impasse Cova do Arco, Arco da Calheta N°68<br>
-                8937-030 Arco da Calheta<br>
-                Portugal
-              </dd>
-            </dl>
-          </div>
-        </article>
+        </div>
       </section>
     </main>
 

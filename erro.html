@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataforma do Estudante — Dados Pessoais</title>
-    <link rel="stylesheet" href="css/dados-pessoais.css" />
+    <title>Página não encontrada — Plataforma do Estudante</title>
+    <link rel="stylesheet" href="css/erro.css" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
@@ -18,11 +18,11 @@
         <ul class="menu-list">
           <li><a href="home.html" class="menu-item">Início</a></li>
           <li>
-            <details class="menu-details" open>
+            <details class="menu-details">
               <summary class="menu-item">Geral <span class="arrow">›</span></summary>
               <ul class="submenu">
                 <li><a href="processos.html" class="submenu-item">Processos</a></li>
-                <li><a href="dados-pessoais.html" class="submenu-item active" aria-current="page">Dados Pessoais</a></li>
+                <li><a href="dados-pessoais.html" class="submenu-item">Dados Pessoais</a></li>
                 <li><a href="privacidade.html" class="submenu-item">Privacidade</a></li>
                 <li><a href="ajuda.html" class="submenu-item">Ajuda</a></li>
               </ul>
@@ -121,7 +121,7 @@
           </summary>
           <div class="menu" role="menu" aria-label="Menu do utilizador">
             <div class="user-info">
-              <div class="user-name">Vítor Hugo Pereira Nunes</div>
+              <div class="user-name">Anónimo</div>
               <div class="user-course">Tecnologias e Programação de Sistemas de Informação</div>
             </div>
             <a class="menu-item email" role="menuitem" href="mailto:diretor.tpsi.tesp@mail.uma.pt">diretor.tpsi.tesp@mail.uma.pt</a>
@@ -132,142 +132,29 @@
     </header>
 
     <main id="conteudo" class="container">
-      <div class="page-header">
-        <h1 class="page-title">Dados Pessoais</h1>
-      </div>
-
-      <section class="dados-grid">
-        <!-- Nome e Informação Biográfica -->
-        <article class="card fade-in" aria-labelledby="nome-title">
-          <div class="card-header">
-            <h2 id="nome-title" class="card-title">Nome e Informação Biográfica</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar dados">Alterar</button>
+      <section class="error-state card fade-in" aria-labelledby="error-title">
+        <div class="error-illustration" aria-hidden="true">
+          <svg class="illustration-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- 404 text -->
+            <text x="200" y="150" font-family="system-ui, sans-serif" font-size="120" font-weight="700" fill="currentColor" text-anchor="middle" opacity="0.1">404</text>
+            
+            <!-- Broken link illustration -->
+            <circle cx="150" cy="120" r="30" fill="none" stroke="currentColor" stroke-width="3" />
+            <line x1="120" y1="120" x2="100" y2="100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+            <line x1="180" y1="120" x2="200" y2="100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+            
+            <!-- Exclamation mark -->
+            <line x1="250" y1="80" x2="250" y2="140" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <circle cx="250" cy="160" r="4" fill="currentColor" />
+          </svg>
+        </div>
+        <div class="error-content">
+          <h1 id="error-title" class="error-title">Página não encontrada</h1>
+          <p class="error-subtitle">A página que procura não existe ou foi movida.</p>
+          <div class="error-actions">
+            <a href="home.html" class="btn-home">Voltar ao Início</a>
           </div>
-          <div class="card-body">
-            <div class="profile-section">
-              <div class="profile-photo">
-                <img src="assets/avatar.jpg" alt="Foto de perfil" width="120" height="120" />
-              </div>
-              <div class="profile-info">
-                <dl class="info-list">
-                  <dt>Nome Completo:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nome Abreviado:</dt>
-                  <dd>Vítor Hugo Pereira Nunes</dd>
-                  <dt>Nomes Próprios:</dt>
-                  <dd>Vítor Hugo</dd>
-                  <dt>Apelidos:</dt>
-                  <dd>Pereira Nunes</dd>
-                  <dt>Data de Nascimento:</dt>
-                  <dd>2006-05-17</dd>
-                  <dt>Sexo:</dt>
-                  <dd>Masculino</dd>
-                  <dt>Estado Civil:</dt>
-                  <dd>Solteiro</dd>
-                  <dt>Naturalidade:</dt>
-                  <dd>Portugal (Região Autónoma da Madeira | Calheta | Arco da Calheta)</dd>
-                  <dt>Nacionalidade:</dt>
-                  <dd>Portugal</dd>
-                  <dt>Aluno N°:</dt>
-                  <dd>2133924</dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Documentos de Identificação -->
-        <article class="card fade-in" aria-labelledby="documentos-title">
-          <div class="card-header">
-            <h2 id="documentos-title" class="card-title">Documentos de Identificação</h2>
-          </div>
-          <div class="card-body">
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Fiscal</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-add-small" type="button" aria-label="Adicionar">Adicionar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>267296809</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
-            </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Número de Identificação Civil</h3>
-                <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>3007341</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-                <dt>Validade:</dt>
-                <dd>2026-09-08</dd>
-              </dl>
-            </div>
-
-            <div class="documento-item">
-              <div class="documento-header">
-                <h3 class="documento-title">Segurança Social (Caixa)</h3>
-                <div class="documento-actions">
-                  <button class="btn-edit" type="button" aria-label="Alterar">Alterar</button>
-                  <button class="btn-delete" type="button" aria-label="Apagar">Apagar</button>
-                </div>
-              </div>
-              <dl class="info-list">
-                <dt>Número:</dt>
-                <dd>12022823234</dd>
-                <dt>País de Emissão:</dt>
-                <dd>Portugal</dd>
-              </dl>
-            </div>
-          </div>
-        </article>
-
-        <!-- Contactos -->
-        <article class="card fade-in" aria-labelledby="contactos-title">
-          <div class="card-header">
-            <h2 id="contactos-title" class="card-title">Contactos</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar contactos">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Número de telefone:</dt>
-              <dd>296 893 068</dd>
-              <dt>Número de telemóvel:</dt>
-              <dd>935 320 893</dd>
-              <dt>Email Pessoal:</dt>
-              <dd>vitornunes@gmail.com</dd>
-              <dt>Email Institucional:</dt>
-              <dd>2133924@student.uma.pt</dd>
-            </dl>
-          </div>
-        </article>
-
-        <!-- Morada -->
-        <article class="card fade-in" aria-labelledby="morada-title">
-          <div class="card-header">
-            <h2 id="morada-title" class="card-title">Morada</h2>
-            <button class="btn-edit" type="button" aria-label="Alterar morada">Alterar</button>
-          </div>
-          <div class="card-body">
-            <dl class="info-list">
-              <dt>Morada de Correspondência:</dt>
-              <dd>
-                Impasse Cova do Arco, Arco da Calheta N°68<br>
-                8937-030 Arco da Calheta<br>
-                Portugal
-              </dd>
-            </dl>
-          </div>
-        </article>
+        </div>
       </section>
     </main>
 

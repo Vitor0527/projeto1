@@ -1,0 +1,166 @@
+/* Matrículas/Inscrições page specific styles */
+
+@import url("common.css");
+
+/* Page Header */
+.page-header {
+	margin-bottom: 1.5rem;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+/* Inscrição Section */
+.inscricao-section {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.inscricao-form {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.form-group {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.form-group label {
+	font-weight: 600;
+	font-size: 0.95rem;
+	color: var(--text);
+}
+
+.form-group select {
+	width: 100%;
+	padding: 0.75rem 2.5rem 0.75rem 0.875rem;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background: light-dark(#f9fafb, #0f1114);
+	color: var(--text);
+	font: inherit;
+	font-size: 0.95rem;
+	outline: none;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234b5563' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.875rem center;
+	background-size: 12px;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group select:focus-visible {
+	border-color: var(--focus);
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--focus), transparent 75%);
+}
+
+.form-group select:user-invalid {
+	border-color: var(--error);
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--error), transparent 78%);
+}
+
+.form-group select:user-valid {
+	border-color: var(--success);
+	box-shadow: 0 0 0 3px color-mix(in oklab, var(--success), transparent 80%);
+}
+
+/* Info Message */
+.info-message {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem 1.25rem;
+	border-radius: 10px;
+	background: color-mix(in oklab, #0ea5e9, transparent 90%);
+	border: 1px solid color-mix(in oklab, #0ea5e9, transparent 70%);
+}
+
+.info-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: color-mix(in oklab, #0ea5e9, transparent 80%);
+	color: #0369a1;
+	font-size: 1rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.info-text {
+	flex: 1;
+}
+
+.info-text p {
+	margin: 0;
+	color: #0369a1;
+	font-size: 0.95rem;
+	line-height: 1.5;
+}
+
+/* Form Actions */
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.btn-start {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.8rem 1.5rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: transform 0.05s ease, filter 0.15s ease;
+}
+
+.btn-start:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+}
+
+.btn-start:active {
+	transform: translateY(1px);
+}
+
+.btn-start span {
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.inscricao-section {
+		max-width: 100%;
+	}
+
+	.info-message {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.info-icon {
+		align-self: flex-start;
+	}
+
+	.form-actions {
+		justify-content: stretch;
+	}
+
+	.btn-start {
+		width: 100%;
+		justify-content: center;
+	}
+}
+

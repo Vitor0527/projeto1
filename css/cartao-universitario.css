@@ -1,0 +1,330 @@
+/* Cartão Universitário page specific styles */
+
+@import url("common.css");
+
+/* Page Header */
+.page-header {
+	margin-bottom: 1.5rem;
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+/* Card Content Layout */
+.card-content {
+	margin-bottom: 1.5rem;
+	padding: 1.5rem;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: var(--elev);
+}
+
+.card-layout {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+@media (width >= 900px) {
+	.card-layout {
+		grid-template-columns: 1fr 1.5fr;
+	}
+}
+
+/* Details Section (Left) */
+.details-section {
+	padding: 1.5rem;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+}
+
+.details-list {
+	display: grid;
+	gap: 1.5rem;
+	margin: 0;
+}
+
+.detail-item {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.detail-item dt {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--muted);
+}
+
+.detail-item dd {
+	margin: 0;
+	font-size: 1rem;
+	color: var(--text);
+	line-height: 1.5;
+}
+
+/* Card Preview Section (Right) */
+.card-preview-section {
+	display: grid;
+	gap: 1.5rem;
+}
+
+/* University Card Preview */
+.university-card {
+	background: linear-gradient(135deg, light-dark(#ffffff, #1a1d23) 0%, light-dark(#f0f4f8, #0f1114) 100%);
+	border: 3px solid light-dark(#d1d5db, #374151);
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: 
+		0 4px 12px color-mix(in oklab, #000, transparent 75%),
+		0 0 0 1px color-mix(in oklab, var(--border), transparent 50%);
+	position: relative;
+	overflow: hidden;
+	max-width: 400px;
+	margin: 0 auto;
+	background-color: light-dark(#ffffff, #1a1d23);
+}
+
+.university-card::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle, color-mix(in oklab, var(--primary), transparent 90%) 0%, transparent 70%);
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 1rem;
+	position: relative;
+	z-index: 1;
+}
+
+.card-university-name {
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: var(--primary);
+	letter-spacing: 0.05em;
+	line-height: 1.2;
+	max-width: 60%;
+}
+
+.card-photo {
+	width: 80px;
+	height: 100px;
+	border-radius: 4px;
+	overflow: hidden;
+	border: 2px solid var(--border);
+	background: var(--surface);
+}
+
+.card-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.card-body {
+	position: relative;
+	z-index: 1;
+}
+
+.card-nfc-icon {
+	color: var(--primary);
+	opacity: 0.6;
+	margin-bottom: 0.75rem;
+}
+
+.card-number {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--text);
+	letter-spacing: 0.1em;
+	margin-bottom: 0.5rem;
+	font-family: 'Courier New', monospace;
+}
+
+.card-name {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--text);
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 0.75rem;
+}
+
+.card-left {
+	display: grid;
+	gap: 0.25rem;
+}
+
+.card-role {
+	font-weight: 600;
+	color: var(--muted);
+}
+
+.card-course {
+	color: var(--text);
+	font-weight: 500;
+}
+
+.card-right {
+	display: grid;
+	gap: 0.25rem;
+	text-align: right;
+}
+
+.card-id {
+	font-weight: 700;
+	color: var(--text);
+	font-size: 0.85rem;
+}
+
+.card-expiry {
+	color: var(--muted);
+	font-weight: 500;
+}
+
+/* Status Section */
+.status-section {
+	padding: 1rem;
+	background: color-mix(in oklab, var(--surface), black 3%);
+	border-radius: 10px;
+	border: 1px solid var(--border);
+}
+
+.status-title {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.status-text {
+	margin: 0;
+	font-size: 0.95rem;
+	color: var(--muted);
+}
+
+/* Actions Section */
+.actions-section {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.btn-action {
+	padding: 0.85rem 1.5rem;
+	border-radius: 10px;
+	border: 1px solid color-mix(in oklab, var(--primary), black 10%);
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-size: 0.95rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 0.05s ease, filter 0.15s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.btn-action:is(:hover, :focus-visible) {
+	filter: brightness(1.05);
+}
+
+.btn-action:active {
+	transform: translateY(1px);
+}
+
+/* Alert Section */
+.alert-section {
+	padding: 1.25rem;
+	border-radius: 10px;
+	background: color-mix(in oklab, #f59e0b, transparent 90%);
+	border: 1px solid color-mix(in oklab, #f59e0b, transparent 70%);
+}
+
+.alert-title {
+	margin: 0 0 0.75rem;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #92400e;
+}
+
+.alert-content {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.alert-icon {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: color-mix(in oklab, #0ea5e9, transparent 80%);
+	color: #0369a1;
+	font-size: 0.9rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.alert-text {
+	margin: 0;
+	color: #92400e;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.card-layout {
+		gap: 1.5rem;
+	}
+
+	.university-card {
+		max-width: 100%;
+		padding: 1.25rem;
+	}
+
+	.card-university-name {
+		font-size: 0.7rem;
+	}
+
+	.card-photo {
+		width: 70px;
+		height: 88px;
+	}
+
+	.card-number {
+		font-size: 0.8rem;
+	}
+
+	.card-name {
+		font-size: 0.9rem;
+	}
+
+	.btn-action {
+		font-size: 0.85rem;
+		padding: 0.75rem 1.25rem;
+	}
+}
+
